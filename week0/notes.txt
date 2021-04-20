@@ -1,0 +1,31 @@
+Computer Science (CS)
+ Computer science is the study of algorithmic processes, computational machines 
+ and computation itself.
+ CS is to solve problems.
+ Computers use binary system (0 and 1).
+
+ bits
+     1 2 4 8 16 32 64 128 256
+     8 bits represents 256
+
+ ASCII  - mapping letters to numbers
+     A = 65
+     B == 66
+     C = 67
+
+72 73 33 = hi!
+
+
+Unicode supports all human spoken languages, unlike bits which only supports English.
+
+
+Algorithms: A step by step instructions to solving problems.
+    A function: an action that gets the computer to do something.
+    condition: wether to do this or that.
+    boolean expression: wether a true or a false answer.
+    loop: a programming construct, to repeat some code again and again.
+
+
+
+
+

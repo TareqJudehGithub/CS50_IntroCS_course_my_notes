@@ -1,0 +1,327 @@
+C Language
+
+Code principles:
+1.   Readable
+2.   Clean
+3.   Style
+
+
+Example of printing "Hello, world":
+
+#include <stdio.h>
+int main(void)
+{
+    printf("Hello, world!");
+}
+
+
+Compiler
+A Compiler converts source code (user's code)to machine code (Binary code 0s and 1s).
+
+In Terminal, first we 'compile' our source file 'hello.c':
+$make hello 
+Here, the computer compiles a new file 'hello' which only contains machine code
+0s and 1s. 
+Then, we run the compiled file for execution:
+$./hello   
+
+
+Functions, take inputs, and returns values, variables (outputs).
+
+#include <cs50.h>
+#include <stdio.h>
+
+
+int main(void)
+{
+   
+    string answer = get_string("What is your name? ");
+    printf("Hello, %s!\n", answer);
+}
+
+Above, string  is a data type.  *** We need library <cs50.h> to import data types like a string.
+answer is a variable.
+get_string() is a function.
+("What is your name? " is an input.
+The result of this source code is the output.
+
+For the CS50 IDE,  we got tools like:  help50, style50, and check50 to help with
+users code.
+$help50   checks code errors locally.
+$style50  checks code indentations. 
+$check50  checks the entire file for errors over GitHub.
+
+
+Command lines
+rm      remove file
+mv      move file to a diff path
+rmdir   remove dir
+mkdir   create dir
+
+Placeholders for printf() format codes:
+
+%c  for printing a single character. char  required single quotes ''  not double.
+%f  for printing a floating value
+%i  for printing a single integer
+%li for printing a single long integer
+%s  for printing a single string
+
+
+Counters in C
+int counter = counter + 1;
+OR 
+int counter++;
+
+conditionals:
+if (x < y)
+{
+    printf("X is less that Y);
+}
+else if (x ==  y)
+{
+    printf("X is equal to Y");
+}
+else 
+{
+    printf("X is not less than Y");
+}
+
+Example:
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+
+int main(void)
+{
+    char c = get_char("Do you agree? ");
+    if (tolower(c) == 'y')
+    {
+        printf("Agreed\n");
+    }
+    else 
+    {
+        printf("Not agreed!\n");
+    }
+    char m = 'M';
+    printf("%c in lower case is %c\n", m, tolower(m));
+}
+
+
+
+Loops
+
+Scope: The lines of codes where variables exist.
+{
+    int n = 10;
+}
+n variable only exist inside that scope.
+
+
+Rounding in C
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    float x = get_float("x: ");
+    float y = get_float("y: ");
+    
+    printf("%0.2f\n", x / y);
+}
+
+As you can see, we add decimal between % and f placeholder.
+
+Shorts 
+
+Data Types
+
+boolean
+char
+double
+float number with decimals
+string
+int
+date
+long
+
+placeholders:
+%c char
+%f float, double
+%i int
+%li long
+%s string 
+
+1.  int
+
+The int data type is use for variables that will store integers.
+Integers always take up to 4 bytes of memory (32 bits).
+This means the range of values they can store is necessarily limited to
+32 bits worth of information.
+
+
+string  to declare a string variable
+int     to declare an integer variable
+
+2.  char
+
+    The char data type or (character) is used for variables that will store single 
+    characters.
+    Characters always take up 1 byte of memory(8 bits). This means the range of
+    values they can store is necessarily limited to 8 bits worth of information.
+
+3.  float
+    The float data type is used for variables that store floating-point values,
+    also known as real numbers.
+    Floating points values always take up to 4 bytes of memory (32 bits).
+    It's a a little complicated to describe the range of a float, but suffice it
+    to say with 32 bits of precision, some of which might be used for an integer
+    part, we are limited in how precise we can be.
+
+4. double
+    The double data type is used for variables that store floating-point values,
+    also known as real numbers.
+    The difference between double and float, is that double is double precision.
+    They always take up to 8 bytes (32 bits) of memory.
+    With an additional 32 bits of precision relative to a float, doubles allow us
+    to specify much more precise real numbers.
+
+void
+    void is a type, but not a data type, we assign it a value. void does not give
+    a value back (it returns nothing like printf() function).
+
+5. bool
+    boolean value (true or false).
+    Be sure to include the library <cs50.h> before using a bool value.
+
+6. string 
+    The string data type is used for variables that store a series/collection of characters (strings).
+    Be sure to include the library <cs50.h> before using a bool value.
+
+7.  structure 
+    include more than 1 data type.
+
+
+Declaration:
+int number;
+Assignment:
+number = 17;
+Initialization:
+int number = 17;
+
+
+    functions
+    get_int
+    get_string
+    get_float
+
+
+Operators:
+
+    // Arithmetic Operators:  + - * /
+    int y = 10;
+    int x = y + 1;   // x = 10 + 1 = 11
+    x = x * 5;       // 11 * 5 = 55
+    OR: 
+    x *= 5;         // same as x = x * 5;
+
+    Incrementing values by 1
+    x = x + 1;
+    x**;
+
+    boolean expressions:
+
+    modulus operator  %
+    gives the remainder when dividing two numbers.
+
+    int m = 13 % 4; //  remainder = 1
+
+
+    Logical operators:
+    || or    at least one of the values/variable is true.
+    && and   both values/variables are true.
+    
+
+    Relational operators:
+    < less than
+    > greater than
+    = equals
+    <= less than or equal to
+    >= greater than or equal to
+    == equality operators  
+    != inequality operator
+
+Conditional statements or expressions:
+
+    Conditionals expressions allow your program to take decisions according to the user
+    input.
+    if (boolean-expression)
+    {
+
+    }
+    else {
+        do something else
+    }
+
+    *** 'else' only binds to the nearest 'if' expression.
+
+    Ternary operator
+    int x = if x < 5 ? x = 5 : x = 6;
+
+    Switch statements
+
+    int x = getInt();
+    switch(x)
+    {
+        case 1:
+            printf("One");
+            break;
+        
+        case 2: 
+            printf("Two");
+            break;
+        case 3: 
+            printf("Three");
+            break;
+        default:
+            printf("Another number maybe?");
+    }
+
+
+
+Loops
+    Loops allow your code to run over and over and over.
+
+        while()
+        {
+
+        }
+
+        for Loop
+
+        for (int i = 0; i < 10; i++)
+        {
+            printf("Hello, world!");
+        }
+
+Linux commands:
+    ls  => lists all files and folders
+    cd  => change directory  cd /<folder name>
+    pwd => shows the current directory i'm inside.
+    cd  => returns to the main root directory
+    cd c: => change prompt to drive c
+    mkdir newdir => creates a new folder
+    cp copy file:
+        cp file.txt ./folder/newfile.txt
+    copy dir:
+        cp -r <originalFolder> Newfolder
+        // -r  recursive
+
+    rm <filename> => deletes a file
+    rm -f <filename> to skip confirmation
+    rm -r <foldername> to delete a folder
+    rm -rf to skip folder deletion confirmation
+    mv fileA.txt fileB.txt    => rename files
+
+
+ 
