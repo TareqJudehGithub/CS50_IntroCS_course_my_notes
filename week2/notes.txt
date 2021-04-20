@@ -1,0 +1,31 @@
+Compiling steps:
+     1. Preprocessing => look for any line that starts with # symbol (#include) 
+     lines, and copy/paste its contents, replacing the actual code for these
+     libraries.
+
+     2. compiling => To take this C code, and to convert it to 
+     another source code (assembly code).
+
+     3. assembling => convert the assembly code, into a machine code (0s and 1s).
+     4. linking => takes all machines codes and link them into a 1 file that contain
+     all machines codes assembled. 
+
+clang
+     clang is a C language complier.
+
+     $clang -o playground playground.c -lcs50
+     -o output
+     output a file called playground 
+     take playground.c as an input
+     -lcs50 link cs50 libraries.
+
+make 
+     make automates compiling.
+     $make playground
+     $./playgroup
+
+
+Debugging in C 
+
+1.   printf() to debug. Very cool tool.
+2.   debug50 ./compiled_file   => step by step debugging.
