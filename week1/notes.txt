@@ -5,25 +5,39 @@ Code principles:
 2.   Clean
 3.   Style
 
+CLI: Command Line Interface.
 
-Example of printing "Hello, world":
+Example of printing "Hello, world" in C:
 
-#include <stdio.h>
-int main(void)
-{
-    printf("Hello, world!");
-}
+    #include <stdio.h>
+    int main(void)
+    {
+        printf("Hello, world!");
+    }
 
+    - printf()   for print formatted
+    - C language code lines always ends with a ;  (semi colons)
+    - A function is an object that takes an input, and returns an output.
+    - A function can have a side effect.
+    - Library:  a third-party code that somebody else wrote.
+    - String: text
+    - get-string() a function the guys at Harvard wrote.
+    -  =  is called assignment.  assigns a value to it's respective variable.
+        string first_name = "John Smith";
+    - for get_string() we need to import #include <cs50.h>
+    - %s  format for a string variable.
+    - printf("Hello, %s!, first_name);
+        >>> Hello, John Smith!
 
 Compiler
 A Compiler converts source code (user's code)to machine code (Binary code 0s and 1s).
 
-In Terminal, first we 'compile' our source file 'hello.c':
-$make hello 
-Here, the computer compiles a new file 'hello' which only contains machine code
-0s and 1s. 
-Then, we run the compiled file for execution:
-$./hello   
+- In Terminal, first we 'compile' our source file 'hello.c':
+    $ make hello 
+- Here, the computer compiles a NEW file 'hello' which only contains machine code
+  0s and 1s. 
+- Then, we run the compiled file for execution:
+    $./hello   
 
 
 Functions, take inputs, and returns values, variables (outputs).
@@ -39,20 +53,22 @@ int main(void)
     printf("Hello, %s!\n", answer);
 }
 
-Above, string  is a data type.  *** We need library <cs50.h> to import data types like a string.
-answer is a variable.
-get_string() is a function.
-("What is your name? " is an input.
-The result of this source code is the output.
+- Above, string  is a data type.  *** We need library <cs50.h> to import data 
+ types like a string.
+- answer is a variable.
+- get_string() is a function.
+    "What is your name? " is an input.
+    The result of this source code is the output.
 
 For the CS50 IDE,  we got tools like:  help50, style50, and check50 to help with
 users code.
-$help50   checks code errors locally.
-$style50  checks code indentations. 
-$check50  checks the entire file for errors over GitHub.
+$ help50   checks code errors locally.
+$ style50  checks code indentations. 
+$ check50  checks the entire file for errors over GitHub.
 
 
 Command lines
+cd      change directory
 rm      remove file
 mv      move file to a diff path
 rmdir   remove dir
@@ -136,14 +152,15 @@ Shorts
 
 Data Types
 
-boolean
-char
-double
-float number with decimals
+boolean                         true/false
+char                            1 byte of memory(8 bits)
+double (double precisions)      8 bytes of memory (64 bits)
+float  (number with decimals)   4 bytes of memory (32 bits)
 string
-int
+int                             4 bytes of memory (32 bits)
+long                            64 bytes of memory (bits)
 date
-long
+void  a type, but not a data type, we assign it a value. 
 
 placeholders:
 %c char
@@ -152,25 +169,28 @@ placeholders:
 %li long
 %s string 
 
-1.  int
-
-The int data type is use for variables that will store integers.
-Integers always take up to 4 bytes of memory (32 bits).
-This means the range of values they can store is necessarily limited to
-32 bits worth of information.
-
-
 string  to declare a string variable
 int     to declare an integer variable
 
-2.  char
+Data Types in C
 
+  1.  int
+    The int data type is use for variables that will store integers.
+    Integers always take up to 4 bytes of memory (32 bits).
+    This means the range of values they can store is necessarily limited to
+    32 bits worth of information.
+
+    unsigned int data type for integers higher than 2 billions till the range
+    of 4 billions.
+
+    
+ 2.  char
     The char data type or (character) is used for variables that will store single 
     characters.
     Characters always take up 1 byte of memory(8 bits). This means the range of
     values they can store is necessarily limited to 8 bits worth of information.
 
-3.  float
+ 3.  float
     The float data type is used for variables that store floating-point values,
     also known as real numbers.
     Floating points values always take up to 4 bytes of memory (32 bits).
@@ -178,7 +198,7 @@ int     to declare an integer variable
     to say with 32 bits of precision, some of which might be used for an integer
     part, we are limited in how precise we can be.
 
-4. double
+4. double (double precisions)
     The double data type is used for variables that store floating-point values,
     also known as real numbers.
     The difference between double and float, is that double is double precision.
@@ -187,8 +207,9 @@ int     to declare an integer variable
     to specify much more precise real numbers.
 
 void
-    void is a type, but not a data type, we assign it a value. void does not give
-    a value back (it returns nothing like printf() function).
+    void is a type, but not a data type, we assign it a value. 
+    void does not give a value back (it returns nothing like printf() function).
+    void is like a placeholder for 'nothing'
 
 5. bool
     boolean value (true or false).
@@ -199,21 +220,82 @@ void
     Be sure to include the library <cs50.h> before using a bool value.
 
 7.  structure 
-    include more than 1 data type.
+    include more than 1 data type.  like an integer and a string.
 
+
+Variables 
+ assign variables:
+  int number;
+  char letter;
+
+assign multiple variables:
+  int height, width;
 
 Declaration:
-int number;
-Assignment:
-number = 17;
-Initialization:
-int number = 17;
+    int number;
+
+Assignment:  assigning value 17 to the variable number
+    number = 17;
+
+Initialization: creating a variable and assigning it a value at the same time.
+    int number = 17;
 
 
     functions
     get_int
     get_string
     get_float
+
+- Casting (converting) data types in C:
+    // converts x data type to float.
+    int x = 10;
+    (float) x;
+ 
+
+Example of abstraction: We have a function called mew(), and we need to
+add it to a for loop.
+#include <stdio.h>
+#include <cs50.h>
+
+
+// function meow
+void meow(void)
+{
+    printf("meow\n");
+}
+
+int main(void)
+{
+    for (int i = 0; i <3; i++)
+    {
+        meow();
+    }
+}
+
+# notice how the function mew must be above the for loop, else the compiler
+will error out. We could use prototype for function meow:
+
+#include <stdio.h>
+#include <cs50.h>
+
+// prototype
+void meow(void);
+{
+    printf("meow\n");
+}
+
+int main(void)
+{
+    for (int i = 0; i <3; i++)
+    {
+        meow();
+    }
+}
+
+void (meow)
+{
+    printf("Hello, world!);
+}
 
 
 Operators:
@@ -229,18 +311,23 @@ Operators:
     x = x + 1;
     x**;
 
-    boolean expressions:
-
+    
     modulus operator  %
     gives the remainder when dividing two numbers.
 
     int m = 13 % 4; //  remainder = 1
 
+    boolean expressions:
+     Used to compare values
+     true or false
+     
+     0 is false
+     every non-zero value in C, is true
 
     Logical operators:
-    || or    at least one of the values/variable is true.
-    && and   both values/variables are true.
-    
+     || or   only true if at least one of the operands(sides) values/variables is true.
+     && and   only true if both operands(sides) values/variables are true.
+     Not !    the opposite
 
     Relational operators:
     < less than
