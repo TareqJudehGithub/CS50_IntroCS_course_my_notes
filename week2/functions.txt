@@ -1,0 +1,36 @@
+Functions
+ Also called Procedures or Methods.
+ A function is a box/object that takes a number of inputs (parameters) and 
+ produces an output.
+
+  // function header
+  int some_func(param1, param2)
+  {
+    // function body
+    return param1 + param2
+
+  }
+
+Why use functions?
+ Organization
+  Functions breaks up a complicated problem into more manageable subparts.
+ Simplification
+  Smaller components tend to be easier to design, implement, and debug.
+ Reusability
+  We only write them once, and call them as many times as we need.
+
+Functions are usually placed above main
+
+Function declaration
+ The first step in creating a function.
+  
+  return-type name(argument-list);
+
+    return-type: what kind of variable the function will output
+    name: function name (should be descriptive and meaningful)
+    argument-list: types of variables the function will accept 
+    as inputs.
+  
+  
+
+

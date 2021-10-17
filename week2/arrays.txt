@@ -1,0 +1,36 @@
+Arrays in C
+
+ - We can store elements in array.
+ - All elements should be of the same data type (int, char, str)
+ - Elements inside an array can be accessed directly by index
+ - First element in arrays starts from 0 (not 1)
+ - Last element is located at index at n - 1  (total elements - 1)
+
+ Array declaration
+  type name[size];
+   type: array elements data type
+   name: meaningful array name
+   size: number of elements inside the array
+
+  examples:
+   int numbers[5];
+   string countries[3];
+
+  instantiation syntax:
+  int numbers[] = {2, 3, 1, 6, 3, 5};
+
+  individual element syntax:
+  bool truthtable[3];
+  truthtable[0] = false;
+  truthtable[1] = true;
+  truthtable[3] = false;
+
+
+  Two-dimensional array:
+  bool battleship[10][10];
+    it's like 10*10 grid of cells
+  
+  in C, we must loop over all elements of one array and assign them to 
+  another array. but we cannot directly assign one array to another using
+  = assignment.
+  

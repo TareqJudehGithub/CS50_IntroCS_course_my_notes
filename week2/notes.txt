@@ -1,12 +1,18 @@
+$ clang -o hello hello.c -lcs50
+
 Compiling steps:
-     1. Preprocessing => look for any line that starts with # symbol (#include) 
-     line, copy/paste its content, replacing the actual code for these
-     libraries.
+  Preprocessing => Compiling => Assembling => Linking
+     1. Preprocessing 
+          looks for any line that starts with # symbol (#include) 
+          line, copy/paste its content, replacing the actual code for these
+          libraries. 
 
-     2. compiling => To take this C (user's source code), and to convert it to 
-     another source code (called assembly code).
+     2. compiling 
+          To take this C (user's source code), and to convert it to 
+          another source code (called Assembly code).
 
-     3. assembling => convert the assembly code, into machine code (0s and 1s).
+     3. assembling 
+          converts the assembly code, into machine code (0s and 1s).
 
      4. linking => takes all machines codes and link them into a one big file 
      that contain all machines codes assembled. 
@@ -15,8 +21,7 @@ clang
      clang is a C language complier.
 
      $clang -o playground playground.c -lcs50
-     -o output
-     output a file called playground 
+     -o for output  => outputs a file called playground 
      take playground.c as an input
      -lcs50 link cs50 libraries.
 
@@ -30,7 +35,8 @@ Debugging in C
 
 1.   printf() to debug. Very cool tool.
 2.   debug50 ./compiled_file   => step by step debugging.
-
+  Call stack: All of the functions that ur program at that point of time has
+  executed but has not returned from.
 
 Memory
      Data Types size in memory:
@@ -43,8 +49,33 @@ Memory
      string    ? bytes
 
 
+#include <string.h>
+     #include <string.h> // strlen()
+     #include <string.h>   // function for calling stringlen
+     strlen() function requires %li (long) data type.
 
- 
+#include <ctype.h>  // islower(), isupper(), tolower(), toupper()
+
+
+#include <stdio.h>
+
+params for function main: argc as int, and argv as an array
+ argc is a shorthand notation for argument count, the number of words users
+ will type in input.
+ argv is a shorthand notation for argument vector, vector a fancy way of saying
+ list, it is a variable that is going to store in an array, all of the words the
+ user type in argc.
+
+     int main(int argc, string argv[])  
+     {
+     
+     }
+
+Why int main(void) starts with int?
+     programmers refer to integers/numbers to describe /messages/errors/warnings.
+
+
+Cryptography:  plaintext => cipher => cipher text
 
 
 
