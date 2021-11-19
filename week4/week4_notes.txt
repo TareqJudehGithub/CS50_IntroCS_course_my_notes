@@ -1,0 +1,61 @@
+Memory
+
+- In binary we use base 2 (0 and 1)
+- In decimal we use base 10 ( 0 - 9)
+- In Hexadecimal we use base-16 (a - f)
+Hexadecimal
+ - Counting in Hexadecimal
+   01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 
+  
+- In CSS color:  #00bfff      00(red) bf(green) ff(blue)
+
+int num = 1;
+printf("/p", num);   displays the location of a variable in memory
+
+Pointers
+- A pointer variable that contain the address of some value;
+- Pointers are variables that store addresses (in memory).
+
+
+int n = 50;
+int *p = *n;
+
+>> reference to the location of n variable in memory.
+  Example:
+       string s = "HI!";
+       printf("%p\n", s);
+       printf("%p\n", &s[1]);
+
+       %p here for pointer
+      
+      >>> 0x402004    The address of a variable in memory
+      >>> 0x402005    The address of a char in memory
+
+  char *s = "hi!";
+
+     char *s = get_string("s: ");
+    
+    - * means here's the address of something.
+    - char * gives us a pointer variable, which will point to a char 
+      location in memory.
+
+    // both t & s share the same address in memory
+    char *t = s;
+
+
+
+malloc()   
+ - Memory allocation
+
+free()
+// Free memory from t variable
+    free(t);
+
+valgrind()
+ A program detects errors in memory.
+
+
+
+
+
+

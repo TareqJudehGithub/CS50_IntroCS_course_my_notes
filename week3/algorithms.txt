@@ -1,0 +1,99 @@
+Algorithms
+
+
+Running-Time. The time needed for an algorithm to finish executing.
+
+Big O
+  - O(n) Big O of n
+  - O(n/2) Big O of n over 2
+  - O(log sub2 n) Big O of log over based 2 of n
+  - O(1)  
+  - O(log n)
+  - O(n sup2)  Big O of n square 2
+
+
+Linear Search:   searching for an item step by step. Like searching for a phone
+  number in a phone book, searching page by page.
+
+  for i from 0 to n-1
+  if number behind i'th door
+    return true
+  return false
+
+Binary Search 
+ If number behind middle door
+  return true
+ else if number < middle door
+  Search left half
+else if number > middle door
+  Search right half
+
+
+strcmp() function
+ Part of the <string.h> library
+
+strcmp(look_in, look_for))  // string compare
+ If look_for = look_in   strcmp() returns 0
+ If look_for < look_in   strcmp() returns -1
+ If look_for > look_in   strcmp() returns 1
+
+
+
+What is "Algorithm"?
+     A set of steps for computer program to accomplish a task.
+
+     Input Data => Do complex Calculations (code) => Output
+
+
+     Example: How does Google Maps work? 
+     They use a Route finding algorithms.
+
+     What makes a good algorithm?
+     good algorithms solve problems, and  makes programs runs faster and more
+     efficient.
+
+     Asymptotic Analysis
+      Allows algorithms to be compared independently of a particular 
+      programming language or hardware.
+
+     
+     guessing Game:
+     linear search: guess all numbers lined up in a row. 
+     A good example of linear search in programming is using for loop algorithm.
+
+     Binary search: by eliminating half the numbers till we guess the right 
+     number.
+     
+     Binary search is an efficient algorithm for finding an item from a sorted 
+     list of items. It works by repeatedly dividing in half the portion of the 
+     list that could contain the item, until you've narrowed down the possible 
+     locations to just one. We used binary search in the guessing game 
+     introduced in the introductory tutorial (Khan academy).
+     
+     - In order to leverage the use of Binary search, we first need to SORT our
+       array, else we cannot make assumptions about the array's contents.
+
+    Data Structure in C
+      Data Structure is a user-defined data type that can store multiple related
+      items.
+
+      // Data Structure
+      typedef struct
+      {
+          string name;
+          string number;
+      }
+      person;
+
+    Bubble Sorting
+     The largest element is shifted all the way to the end of the array.
+     with loops, the array should get sorted from smaller to greater elements.
+     
+
+
+
+    
+
+ 
+
+

@@ -51,7 +51,7 @@ Memory
 
 #include <string.h>
      #include <string.h> // strlen()
-     #include <string.h>   // function for calling stringlen
+     #include <string.h>   // function for calling strlen()
      strlen() function requires %li (long) data type.
 
 #include <ctype.h>  // islower(), isupper(), tolower(), toupper()
