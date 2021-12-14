@@ -1,0 +1,16 @@
+Data Structures
+
+  struct - a function to implement a structure in C.
+  . To go inside a data structure.
+  * reference operator.
+
+ Linked lists. A collection of node, connected by a pointer. 
+
+
+ Try 
+  - A tree to store strings besides numbers.
+
+ Queue
+  - A data structure which implements a FIFO method.
+  - enqueue 
+  - dequeue

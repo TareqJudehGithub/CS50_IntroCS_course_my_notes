@@ -1,0 +1,31 @@
+SQL
+ Relational Databases (DB)
+ 
+ SQL Lite
+- SQL Lite stores data in a binary file on the form of tables.
+    Access sql lite
+     $ sqlite3
+    
+    Import database file in sqlite:
+     1. Specify database mode(type)
+        sqlite> .mode csv
+     2. import < db filename> <table to create>    
+        sqlite> .import tv_shows_csv shows
+  
+
+SQL CRUD operations
+  create
+    CREATE TABLE <table_name>
+    (
+      column_name data_type attributes
+    );
+
+  READ
+  UPDATE
+  DELETE
+
+SQLite3 commands
+$ sqlite3 <db_name>           connects to a specified db
+sqlite> .table                returns all db tables
+sqlite> .schema <table_name>  returns columns of a specified table
+

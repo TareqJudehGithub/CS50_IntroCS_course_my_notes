@@ -1,0 +1,37 @@
+How the Internet works?
+  Internet
+    - A mechanism to delivery data from somewhere to another.
+  IP  Internet Protocol
+    - How computers address each other.
+    - A Unique address for computers browsing the Internet.
+  
+  DNS. Domain Name Service.
+    - DNS converts URL (Website name) of web servers into IP addresses.
+  
+  TCP Transmissions Control Protocol.
+    - TCP handles delivery of data. 
+    - TCP handles retransmitting data if lost.
+  
+  HTTP
+    - Hyper Text Transfer Protocol.
+    - GET and POST are two commands HTTP supports
+    - GET request example is when a browser requests data from a web server.
+    - HTTP request structure
+      GET / HTTP/1.1
+      HOST: www.example.com
+  HTTPS
+    - A secured version of HTTP.
+    - The data being transferred is encrypted.
+  
+  Domain Name
+    - harvard.edu
+    - https://www.example.com/index.html
+    - www.  world wide web
+
+  curl
+   - curl connects to networks, 
+
+  URL parameters
+  ?q =  search for
+    www.google.com/search/?q=cats
+    

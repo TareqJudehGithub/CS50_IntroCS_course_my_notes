@@ -1,0 +1,43 @@
+Python Notes
+ - Python is indentation-sensitive.
+ - Python uses Interpreter executing code line by line.
+ - Python supports strings with single quotes and double quotes unlike C and Java.
+ - Python logical operators: AND, OR, NOT.
+ - Python uses in keyword.. very powerful feature in Python.
+ - Python conditional structure: if, elif, and else.
+ - Python loop:  while and for.  There's no do loop in Python.
+    for i in (int):
+      do something
+ - Python lists.
+    my_list = list()
+    my_list = [1, 2, 3]
+    my_list.append(4)
+    
+ - Python list Comprehension
+    my_list = [x for x in range(10)]
+ 
+ - Tuples. Ordered, immutable, set of data.
+  List of Tuples: 
+    scores = [
+      ("John", 79),
+      ("Sarah", 88)
+  ]
+  - Loop over scores:
+    for name, score in scores:
+    print(f"{name} scored {score}")
+ 
+ - Dictionary.  pair of and keys: values
+    pizzas = {
+      "cheese": 9,
+      "pepperoni": 10,
+      "vegetable": 11,
+      "buffalo chicken": 7
+    }
+    Edit key:
+    pizzas["cheese"] = 10
+
+    loop over dicts
+    for key, value in pizzas.items():
+    print(key, value)
+    
+  
