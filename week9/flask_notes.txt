@@ -1,0 +1,30 @@
+Flask 
+ - Flask is a Python framework which serves as web server application.
+
+ application.py     Flask server file 
+ requirements.txt   a file containing libraries used in building the flask application.
+ templates          a folder containing html files used.
+ static             a folder containing css and js files used.
+
+ Flask is an MVC framework
+
+ MVC Model => View => Controller
+
+  MVC is a design pattern
+    Model
+      - Technique, services, and model of our data.
+      - Like which database we using in the application.
+
+    View
+      - What the user sees.
+      - HTML and CSS files.
+    Controller
+      - Where we write our Python code. 
+      - Files that control our web application.
+
+request library
+
+  from flask import request
+    - request.args is a get request
+    - request.form is a post request
+     

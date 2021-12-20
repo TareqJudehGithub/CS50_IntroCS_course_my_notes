@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'template.html' %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <!--url_for(Python function inside a route)-->
+    <a href="{{ url_for('index') }}">Back</a>
+    <h4>Error!</h4>
+    <p>{{ message | capitalize() | safe }}</p>
+    {% endblock %}
+
+  </body>
+</html>

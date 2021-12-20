@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'template.html' %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <h1>Let's learn Flask!</h1>
+    <!-- action="/" serves "/" route in server2.py -->
+    <form action="/" method="POST">
+      <input type="text" name="name" placeholder="Name" autofocus>
+      <input type="submit" value="Submit">
+    </form>
+    {% endblock %}
+  </body>
+</html>

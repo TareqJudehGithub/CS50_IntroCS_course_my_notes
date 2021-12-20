@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'template.html' %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sport</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for name in registrants %}
+          <td>
+            <h4>{{ name | title | safe }}</h4>
+          </td>
+          <td>
+            <h5>{{ registrants[name] | title | safe }}</h5>
+          </td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+
+
+    {% endblock %}
+  </body>
+</html>

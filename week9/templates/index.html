@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'template.html' %}
+    {% block head %}
+    {{ super() }}
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block content %}
+    <h3>Welcome form</h3>
+    <form action="/greet" method="get">
+      <input type="text" name="name" autocomplete="off" autofocus placeholder="Welcome">
+      <input type="submit" value="Submit">
+    </form>
+    {% endblock %}
+
+    {% block foot %}
+    <h6>&copy; 2021</h6>
+    {% endblock %}
+  </body>
+</html>
